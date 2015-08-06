@@ -1,0 +1,21 @@
+{
+  "name": "md-avatar",
+  "main": "md-avatar.js",
+  "version": "1.0.0",
+  "authors": [
+    "scarletsky <scarletsky1025@gmail.com>"
+  ],
+  "keywords": "material design avatar for canvas",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/scarletsky/md-avatar.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

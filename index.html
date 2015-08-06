@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="./md-avatar.js"></script>
+</head>
+
+<body>
+
+    <div id="main"></div>
+
+    <script>
+        var main = document.getElementById('main');
+        var content = [
+            'Scarletsky',
+            '你好',
+            'Hello',
+            'こんにちは',
+            'Bonjour',
+            'й',
+            '안녕하세요'
+        ];
+
+        content.forEach(function(t) {
+            var avatar = new mdAvatar({
+                size: 100,
+                text: t
+            });
+
+            console.log(avatar.toDataURL());
+            main.appendChild(avatar);
+        });
+    </script>
+</body>
+
+</html>
