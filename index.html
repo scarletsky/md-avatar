@@ -2,15 +2,123 @@
 <html>
 
 <head>
+    <style>
+
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            width: 100%;
+            height: 460px;
+            padding-top: 150px;
+            background: #00B2EE;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            margin: 0 auto;
+            padding: 30px;
+            color: white;
+            font-size: 48px;
+            line-height: 80px;
+            border: 10px solid white;
+            width: 300px;
+            text-align: center;
+        }
+
+        header h1 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #container {
+            width: 60%;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+
+        #container h1 {
+            color: #00B2EE;
+            font-size: 24px;
+            margin-top: 50px;
+        }
+
+        #container h1:first-child {
+            margin-top: 30px;
+        }
+
+        #container a {
+            color: #00B2EE;
+            text-decoration: none;
+        }
+
+        #demo {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+        }
+
+        div#pre, pre {
+            padding: 16px;
+            border: 1px solid #00B2EE;
+            border-radius: 10px;
+            font-family: 'sans-serif';
+            line-height: 28px;
+        }
+
+    </style>
     <script src="./md-avatar.js"></script>
 </head>
 
 <body>
 
-    <div id="main"></div>
+    <header>
+        <h1>
+            <a href="https://github.com/scarletsky/md-avatar">md-avatar</a>
+        </h1>
+    </header>
 
+    <main id="container">
+
+        <h1>Install</h1>
+        <div id="pre">
+bower install md-avatar
+        </div>
+
+        <h1>Code</h1>
+        <pre>
+var main = document.getElementById('main');
+var content = [
+    'Scarletsky',
+    '你好',
+    'Hello',
+    'こんにちは',
+    'Bonjour',
+    'й',
+    '안녕하세요'
+];
+
+content.forEach(function(t) {
+    var avatar = new mdAvatar({
+        size: 100,
+        text: t
+    });
+
+    main.appendChild(avatar);
+});
+        </pre>
+
+        <h1>Demo</h1>
+        <div id="demo"></div>
+
+        <h1>More Information</h1>
+        <p>Please visit <a href="https://github.com/scarletsky/md-avatar">Home Page</a></p>
+
+    </main>
     <script>
-        var main = document.getElementById('main');
+        var demo = document.getElementById('demo');
         var content = [
             'Scarletsky',
             '你好',
@@ -27,7 +135,7 @@
                 text: t
             });
 
-            main.appendChild(avatar);
+            demo.appendChild(avatar);
         });
     </script>
 </body>
