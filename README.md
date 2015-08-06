@@ -6,7 +6,7 @@ Generate material design avatar with canvas!
 
 ## install
 ```
-bower install scarletsky/md-avatar
+bower install md-avatar
 ```
 
 ## usage
@@ -16,12 +16,12 @@ new mdAvatar(options); // It will return a canvas dom element.
 new mdAvatar({
 	size: 100,
 	text: 'S'
-});
+}); // <canvas width="100" height="100">
 
 new mdAvatar({
 	size: 64,
 	text: 'G'
-}).toDataURL();
+}).toDataURL(); // data:image/png;base64,.......
 ```
 
 ## options
